@@ -60,12 +60,20 @@
 `POST http://localhost/zssn/public/api/survivors`
 
 #### Supply with the following properties
-`name -> string`
-`age -> integer`
-`gender -> string`
-`latitude -> double`
-`longitude -> double`
-`infected -> boolean`
+Property  | Type
+--------  | ----
+name      | string
+----      | ------
+age       | integer
+---       | -------
+gender    | string
+------    | ------
+latitude  | double
+--------  | ------
+longitude | double
+--------- | ------
+infected  | boolean
+
 
 ## Response
 ~~~
