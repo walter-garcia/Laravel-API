@@ -11,6 +11,6 @@ class SurvivorTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+    	factory(\App\Survivor::class, 20)->create();
     }
 }

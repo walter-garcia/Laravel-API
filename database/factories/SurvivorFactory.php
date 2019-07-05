@@ -5,14 +5,14 @@
 use App\Model;
 use Faker\Generator as Faker;
 
-$factory->define(Model::class, function (Faker $faker) {
-	$genders = ['m','f'];
+$factory->define(\App\Survivor::class, function (Faker $faker) {
+
     return [
         'name' => $faker->name,
-        'birthdate' => $faker->dateTimeBetween('-40 years', '-20 years'),
-        'gender' => $genders[$faker->numberBetween(0,1)],
+        'age' => $faker->numberBetween(10, 90),
+        'gender' => $faker->randomElement(['male', 'female']),
         'latitude' => $faker->latitude,
         'longitude' => $faker->longitude,
-        'infected' => $faker->boolean(50)
+        'infected' => $faker->boolean(50),
     ];
 });
