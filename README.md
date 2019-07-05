@@ -1,4 +1,4 @@
-# Zombie Survival Social Network - (ZSSN)
+# Zombie Survival Social Network - (ZSSN - API)
 
 `Gitclone` or <a href="https://marcels-zssn.herokuapp.com" target="_blank">Click Here<a>
 
