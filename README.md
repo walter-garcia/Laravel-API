@@ -22,7 +22,6 @@
       "gender": "female",
       "latitude": -72.058789,
       "longitude": 116.679161,
-      "infected": 0,
       "created_at": "2019-07-05 00:42:00",
       "updated_at": "2019-07-05 00:42:00"
     },
@@ -33,7 +32,6 @@
       "gender": "male",
       "latitude": 75.454592,
       "longitude": -154.987451,
-      "infected": 1,
       "created_at": "2019-07-05 00:42:00",
       "updated_at": "2019-07-05 00:42:00"
     },
@@ -44,7 +42,6 @@
       "gender": "female",
       "latitude": 5.944988,
       "longitude": -69.344035,
-      "infected": 1,
       "created_at": "2019-07-05 00:42:00",
       "updated_at": "2019-07-05 00:42:00"
     }
