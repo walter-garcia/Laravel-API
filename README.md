@@ -86,12 +86,14 @@ infected  | boolean
 `PUT http://localhost/zssn/public/api/survivors/id`
 
 #### Supply new information(s)
-`name -> string`
-`age -> integer`
-`gender -> string`
-`latitude -> double`
-`longitude -> double`
-`infected -> boolean`
+Property  | Type
+--------  | ----
+name      | string
+age       | integer
+gender    | string
+latitude  | double
+longitude | double
+infected  | boolean
 
 ## Response
 ~~~
