@@ -1,6 +1,6 @@
 # Zombie Survival Social Network - (ZSSN)
 
-`Gitclone the project or <a href="https://marcels-zssn.herokuapp.com" target="_blank">Click Here<a>`
+`Gitclone` or <a href="https://marcels-zssn.herokuapp.com" target="_blank">Click Here<a>
 
 
 ## List All Survivors
