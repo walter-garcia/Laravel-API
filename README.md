@@ -63,15 +63,10 @@
 Property  | Type
 --------  | ----
 name      | string
-----      | ------
 age       | integer
----       | -------
 gender    | string
-------    | ------
 latitude  | double
---------  | ------
 longitude | double
---------- | ------
 infected  | boolean
 
 
