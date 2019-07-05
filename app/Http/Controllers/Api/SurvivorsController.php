@@ -28,7 +28,7 @@ class SurvivorsController extends Controller
 
     	return response()->json($data);
     }
-
+     
     public function store(Request $request)
     {
     	$survivorData = $request->all();
@@ -39,10 +39,10 @@ class SurvivorsController extends Controller
 
     public function update(Request $request, Survivor $id)
     {
-    	$data = $request->all();
+    	$data = $request->all('latitude', 'longitude');
     	$id->update($data);
 
-    	return response()->json(['msg' => 'Survivor Information Updated Successfully', 'code' => 201]);
+    	return response()->json(['msg' => 'Survivor Location Updated Successfully', 'code' => 201]);
     }
 
     public function delete(Survivor $id)

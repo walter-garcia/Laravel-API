@@ -20,9 +20,8 @@ class CreateSuvivorsTable extends Migration
             $table->string('gender');
             $table->double('latitude');
             $table->double('longitude');
-            $table->boolean('infected')->default(false);
-            // $table->string('infection_cases')->default(0);
-            // $table->unsignedBigInteger('survivor_id')->index();
+            $table->string('items')->nullable();
+            $table->double('points')->nullable();
             $table->timestamps();
         });
     }

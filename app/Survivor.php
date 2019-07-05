@@ -12,18 +12,7 @@ class Survivor extends Model
     	'gender',
     	'latitude',
     	'longitude',
-    	'infected'
+        'items',
+        'points',
     ];
-
-    /* business rules */
-    // function getTotalPoints()
-    // {
-    //     return $this->items->pluck('points')->sum();
-    // }
-
-    /* relationships */
-    public function items()
-    {
-    	return $this->hasMany(Item::class);
-    }
 }

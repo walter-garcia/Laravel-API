@@ -9,10 +9,11 @@ $factory->define(\App\Survivor::class, function (Faker $faker) {
 
     return [
         'name' => $faker->name,
-        'age' => $faker->numberBetween(10, 90),
+        'age' => $faker->numberBetween(1, 100),
         'gender' => $faker->randomElement(['male', 'female']),
         'latitude' => $faker->latitude,
         'longitude' => $faker->longitude,
-        'infected' => $faker->boolean(50),
+        'items' => $faker->randomElement(['water', 'food', 'medication', 'ammunition']),
+        'points' => $faker->numberBetween(1, 4),
     ];
 });

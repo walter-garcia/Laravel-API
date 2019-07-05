@@ -23,7 +23,7 @@ Route::namespace('Api')->group(function() {
 	Route::get('/survivors/{id}', 'SurvivorsController@show')->name('survivors.single');
 
 	Route::post('/survivors', 'SurvivorsController@store')->name('survivors.create');
-	Route::put('/survivors/{id}', 'SurvivorsController@update')->name('survivors.update');
+	Route::put('/survivors/{id}/location', 'SurvivorsController@update')->name('survivors.update');
 
 	Route::delete('/survivors/{id}', 'SurvivorsController@delete')->name('survivors.destroy');
 });
