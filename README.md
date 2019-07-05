@@ -60,15 +60,13 @@
 `POST http://localhost/zssn/public/api/survivors`
 
 #### Supply with the following properties
-Property  | Type
---------  | ----
-name      | string
-age       | integer
-gender    | string
-latitude  | double
-longitude | double
-infected  | boolean
-
+Property  | Type | Format
+--------  | ---- | ------
+name      | string | New Name
+age       | integer | 30
+gender    | string | male or female
+latitude  | double | Positive (123.456789) = North / Negative (-123.456789) = South
+longitude | double | Positive (123.456789) = East / Negative (-123.456789) = West
 
 ## Response
 ~~~
@@ -85,20 +83,16 @@ infected  | boolean
 ## Request
 `PUT http://localhost/zssn/public/api/survivors/id`
 
-#### Supply new information(s)
-Property  | Type
---------  | ----
-name      | string
-age       | integer
-gender    | string
-latitude  | double
-longitude | double
-infected  | boolean
+#### Provide the new location
+Property  | Type | Format
+--------  | ---- | ------
+latitude  | double | Positive (123.456789) = North / Negative (-123.456789) = South
+longitude | double | Positive (123.456789) = East / Negative (-123.456789) = West
 
 ## Response
 ~~~
 {
-  "msg": "Survivor Information Updated Successfully",
+  "msg": "Survivor Location Updated Successfully",
   "code": 201
 }
 ~~~
