@@ -11,7 +11,7 @@
 
   <body>
     <div class="container text-center">
-        <img src="{{ url('../public/css/images/survivor.jpg') }}" class="img-fluid" alt="Responsive image">
+        <img src="{{ url('survivor.jpg') }}" class="img-fluid" alt="Responsive image">
 
         <a href="{{ url('/api/survivors') }}" class="btn btn-danger btn-lg">B E W A R E</a>
     </div>
