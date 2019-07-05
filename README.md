@@ -76,12 +76,12 @@ longitude | double | Positive (123.456789) = East / Negative (-123.456789) = Wes
 }
 ~~~
 
-## Update Survivor Information(s)
+## Update Survivor Location
 
-`PUT api/survivors/id`
+`PUT api/survivors/{id}/location`
 
 ## Request
-`PUT http://localhost/zssn/public/api/survivors/id`
+`PUT http://localhost/zssn/public/api/survivors/id/location`
 
 #### Provide the new location
 Property  | Type | Format
