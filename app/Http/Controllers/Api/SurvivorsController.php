@@ -34,7 +34,7 @@ class SurvivorsController extends Controller
     	$survivorData = $request->all();
     	$this->survivor->create($survivorData);
 
-    	return response()->json(['msg' => 'Survivor Information Created Successfully', 'code' => 201]);
+    	return response()->json(['msg' => 'Survivor Information Added Successfully', 'code' => 201]);
     }
 
     public function update(Request $request, Survivor $id)
