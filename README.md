@@ -95,6 +95,7 @@ longitude | double | Positive (123.456789) = East / Negative (-123.456789) = Wes
 ~~~
 
 ## Delete Survivor Informations
+#### If a survivor dies or get contaminated by the virus, you might want to delete his information from the system!
 
 `DELETE api/survivors/id`
 
