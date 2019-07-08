@@ -335,8 +335,10 @@ class EndPointsTest extends TestCase
 
 ## Response
 
-Marcels-MacBook-Pro:ZSSN marcel$ vendor/bin/phpunit
+<p>
+Marcels-MacBook-Pro:ZSSN marcel$ vendor/bin/phpunit <br />
 PHPUnit 7.5.13 by Sebastian Bergmann and contributors.
+</p>
 
 | GET                                        |
 |--------------------------------------------|
