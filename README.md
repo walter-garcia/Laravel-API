@@ -103,8 +103,8 @@
 | name      | string  | Survivor's Name                                                        |
 | age       | integer | Survivor's Age                                                         |
 | gender    | string  | Survivor's Gender                                                      |
-| latitude  | double  | `Positive` (123.456789) = `North` / `Negative` (-123.456789) = `South` |
-| longitude | double  | `Positive` (123.456789) = `East` / `Negative` (-123.456789) = `West`   |
+| latitude  | double  | `Positive` (123.456789) = `North` | `Negative` (-123.456789) = `South` |
+| longitude | double  | `Positive` (123.456789) = `East`  | `Negative` (-123.456789) = `West`  |
 
 ## Response
 
@@ -184,8 +184,8 @@
 
 | Property  | Type   | Format                                                                 |
 |-----------|--------|------------------------------------------------------------------------|
-| latitude  | double | `Positive` (123.456789) = `North` / `Negative` (-123.456789) = `South` |
-| longitude | double | `Positive` (123.456789) = `East` / `Negative` (-123.456789) = `West`   |
+| latitude  | double | `Positive` (123.456789) = `North` | `Negative` (-123.456789) = `South` |
+| longitude | double | `Positive` (123.456789) = `East`  | `Negative` (-123.456789) = `West`  |
 
 ## Response
 
