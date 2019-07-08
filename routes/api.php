@@ -20,10 +20,13 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::namespace('Api')->group(function() {
 
 	Route::get('/survivors', 'SurvivorsController@index')->name('survivors.all');
-	Route::get('/survivors/{id}', 'SurvivorsController@show')->name('survivors.single');
+	Route::get('/survivors/{survivor}', 'SurvivorsController@show')->name('survivors.single');
 
 	Route::post('/survivors', 'SurvivorsController@store')->name('survivors.create');
-	Route::put('/survivors/{id}/location', 'SurvivorsController@update')->name('survivors.update');
+	Route::post('/survivors/items', 'ItemsController@store')->name('items.create');
+	Route::post('/report/infection', 'InfectionsController@store')->name('report.create');
+	
+	Route::patch('/survivors/{id}/location', 'SurvivorsController@update')->name('survivors.update');
 
 	Route::delete('/survivors/{id}', 'SurvivorsController@delete')->name('survivors.destroy');
 });

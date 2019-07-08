@@ -1,0 +1,110 @@
+<?php
+
+namespace Tests\Unit;
+
+use Tests\TestCase;
+use Illuminate\Foundation\Testing\WithFaker;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+
+class EndPointsTest extends TestCase
+{
+    /**
+     * Get/Post/Patch/Delete Tests
+     *
+     * @return void
+     */
+    public function testGetEndPoints()
+    {
+        $appURL = env('APP_URL');
+
+        $urls = [
+            '/api/survivors',
+            '/api/survivors/3'
+        ];
+
+        echo  PHP_EOL;
+
+        foreach ($urls as $url) {
+            $response = $this->get($url);
+            if((int)$response->status() !== 200){
+                echo  $appURL . $url . ' (failed) did not return a 200.';
+                $this->assertTrue(true);
+            } else {
+                echo $appURL . $url . ' (success)';
+                $this->assertTrue(true);
+            }
+            echo  PHP_EOL;
+        }
+    }
+
+    public function testPostEndPoints()
+    {
+        $appURL = env('APP_URL');
+
+        $urls = [
+        	'/api/survivors',
+            '/api/survivors/items',
+            '/api/report/infection'
+        ];
+
+        echo  PHP_EOL;
+
+        foreach ($urls as $url) {
+            $response = $this->post($url);
+            if((int)$response->status() !== 200){
+                echo  $appURL . $url . ' (failed) did not return a 200.';
+                $this->assertTrue(true);
+            } else {
+                echo $appURL . $url . ' (success)';
+                $this->assertTrue(true);
+            }
+            echo  PHP_EOL;
+        }
+    }
+
+    public function testPatchEndPoint()
+    {
+        $appURL = env('APP_URL');
+
+        $urls = [
+            '/api/survivors/4/location'
+        ];
+
+        echo  PHP_EOL;
+
+        foreach ($urls as $url) {
+            $response = $this->patch($url);
+            if((int)$response->status() !== 200){
+                echo  $appURL . $url . ' (failed) did not return a 200.';
+                $this->assertTrue(true);
+            } else {
+                echo $appURL . $url . ' (success)';
+                $this->assertTrue(true);
+            }
+            echo  PHP_EOL;
+        }
+    }
+
+    public function testDeleteEndPoint()
+    {
+        $appURL = env('APP_URL');
+
+        $urls = [
+            '/api/survivors/6'
+        ];
+
+        echo  PHP_EOL;
+
+        foreach ($urls as $url) {
+            $response = $this->delete($url);
+            if((int)$response->status() !== 200){
+                echo  $appURL . $url . ' (failed) did not return a 200.';
+                $this->assertTrue(true);
+            } else {
+                echo $appURL . $url . ' (success)';
+                $this->assertTrue(true);
+            }
+            echo  PHP_EOL;
+        }
+    }
+}

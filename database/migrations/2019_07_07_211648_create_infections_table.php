@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSuvivorsTable extends Migration
+class CreateInfectionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,10 @@ class CreateSuvivorsTable extends Migration
      */
     public function up()
     {
-        Schema::create('survivors', function (Blueprint $table) {
+        Schema::create('infections', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
-            $table->integer('age');
-            $table->string('gender');
-            $table->double('latitude');
-            $table->double('longitude');
+            $table->unsignedBigInteger('survivor_id');
+            $table->boolean('infected')->default(false);
             $table->timestamps();
         });
     }
@@ -31,6 +28,6 @@ class CreateSuvivorsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('survivors');
+        Schema::dropIfExists('infections');
     }
 }

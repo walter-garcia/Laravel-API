@@ -11,8 +11,11 @@ class Survivor extends Model
     	'age',
     	'gender',
     	'latitude',
-    	'longitude',
-        'items',
-        'points',
+    	'longitude'
     ];
+
+    public function items()
+    {
+    	return $this->hasMany('App\Item', 'survivor_id');
+    }
 }

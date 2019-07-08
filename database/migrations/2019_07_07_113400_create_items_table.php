@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSuvivorsTable extends Migration
+class CreateItemsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,11 @@ class CreateSuvivorsTable extends Migration
      */
     public function up()
     {
-        Schema::create('survivors', function (Blueprint $table) {
+        Schema::create('items', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
-            $table->integer('age');
-            $table->string('gender');
-            $table->double('latitude');
-            $table->double('longitude');
+            $table->unsignedBigInteger('survivor_id');
+            $table->string('item')->nullable(true);
+            $table->integer('points')->nullable(true);
             $table->timestamps();
         });
     }
@@ -31,6 +29,6 @@ class CreateSuvivorsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('survivors');
+        Schema::dropIfExists('items');
     }
 }
