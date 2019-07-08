@@ -285,7 +285,7 @@ class EndPointsTest extends TestCase
         }
     }
 
-    public function testPatchEndPoints()
+    public function testPatchEndPoint()
     {
         $appURL = env('APP_URL');
 
