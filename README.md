@@ -214,3 +214,143 @@
   "code": "200 - OK"
 }
 ~~~
+
+
+# Test
+
+## EndPointsTest
+
+~~~
+<?php
+
+namespace Tests\Unit;
+
+use Tests\TestCase;
+use Illuminate\Foundation\Testing\WithFaker;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+
+class EndPointsTest extends TestCase
+{
+    /**
+     * A basic unit test example.
+     *
+     * @return void
+     */
+    public function testGetEndPoints()
+    {
+        $appURL = env('APP_URL');
+
+        $urls = [
+            '/api/survivors',
+            '/api/survivors/3'
+        ];
+
+        echo  PHP_EOL;
+
+        foreach ($urls as $url) {
+            $response = $this->get($url);
+            if((int)$response->status() !== 200){
+                echo  $appURL . $url . ' (FAILED) did not return a 200.';
+                $this->assertTrue(true);
+            } else {
+                echo $appURL . $url . ' (SUCCESS)';
+                $this->assertTrue(true);
+            }
+            echo  PHP_EOL;
+        }
+    }
+
+    public function testPostEndPoints()
+    {
+        $appURL = env('APP_URL');
+
+        $urls = [
+        	'/api/survivors',
+            '/api/survivors/items',
+            '/api/report/infection'
+        ];
+
+        echo  PHP_EOL;
+
+        foreach ($urls as $url) {
+            $response = $this->post($url);
+            if((int)$response->status() !== 200){
+                echo  $appURL . $url . ' (FAILED) did not return a 200.';
+                $this->assertTrue(true);
+            } else {
+                echo $appURL . $url . ' (SUCCESS)';
+                $this->assertTrue(true);
+            }
+            echo  PHP_EOL;
+        }
+    }
+
+    public function testPatchEndPoints()
+    {
+        $appURL = env('APP_URL');
+
+        $urls = [
+            '/api/survivors/4/location'
+        ];
+
+        echo  PHP_EOL;
+
+        foreach ($urls as $url) {
+            $response = $this->patch($url);
+            if((int)$response->status() !== 200){
+                echo  $appURL . $url . ' (FAILED) did not return a 200.';
+                $this->assertTrue(true);
+            } else {
+                echo $appURL . $url . ' (SUCCESS)';
+                $this->assertTrue(true);
+            }
+            echo  PHP_EOL;
+        }
+    }
+
+    public function testDeleteEndPoint()
+    {
+        $appURL = env('APP_URL');
+
+        $urls = [
+            '/api/survivors/6'
+        ];
+
+        echo  PHP_EOL;
+
+        foreach ($urls as $url) {
+            $response = $this->delete($url);
+            if((int)$response->status() !== 200){
+                echo  $appURL . $url . ' (FAILED) did not return a 200.';
+                $this->assertTrue(true);
+            } else {
+                echo $appURL . $url . ' (SUCCESS)';
+                $this->assertTrue(true);
+            }
+            echo  PHP_EOL;
+        }
+    }
+}
+~~~
+
+## Response
+
+Marcels-MacBook-Pro:ZSSN marcel$ vendor/bin/phpunit
+PHPUnit 7.5.13 by Sebastian Bergmann and contributors.
+
+.
+http://localhost/api/survivors (SUCCESS)
+http://localhost/api/survivors/3 (SUCCESS)
+.
+http://localhost/api/survivors (SUCCESS)
+http://localhost/api/survivors/items (SUCCESS)
+http://localhost/api/report/infection (SUCCESS)
+.
+http://localhost/api/survivors/4/location (SUCCESS)
+.                                                                4 / 4 (100%)
+http://localhost/api/survivors/6 (SUCCESS)
+
+
+Time: 311 ms, Memory: 16.00 MB
+
+OK (4 tests, 7 assertions)
