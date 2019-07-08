@@ -1,6 +1,6 @@
 # Zombie Survival Social Network - (ZSSN - API)
 
-`<a href="https://marcels-zssn.herokuapp.com" target="_blank">Check it out<a>
+`<a href="https://marcels-zssn.herokuapp.com" target="_blank">Check it out<a>`
 
 
 ## List All Survivors
