@@ -100,7 +100,7 @@
 
 | Property  | Type    | Format                                                                 |
 |-----------|---------|------------------------------------------------------------------------|
-| name      | string  | New Name                                                               |
+| name      | string  | Survivor's Name                                                        |
 | age       | integer | Survivor's Age                                                         |
 | gender    | string  | Survivor's Gender                                                      |
 | latitude  | double  | `Positive` (123.456789) = `North` / `Negative` (-123.456789) = `South` |
