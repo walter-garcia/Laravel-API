@@ -1,4 +1,4 @@
-# `Z`ombie `S`urvival `S`ocial `N `etwork (`ZSSN` - API)
+# `Z`ombie `S`urvival `S`ocial `N`etwork (ZSSN - API)
 
 <a href="https://marcels-zssn.herokuapp.com" target="_blank">Check it out<a>
 
