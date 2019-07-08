@@ -232,7 +232,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 class EndPointsTest extends TestCase
 {
     /**
-     * A basic unit test example.
+     * Get/Post/Patch/Delete Tests
      *
      * @return void
      */
