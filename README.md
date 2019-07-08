@@ -335,26 +335,26 @@ class EndPointsTest extends TestCase
 
 ## Response
 
-#### Marcels-MacBook-Pro:ZSSN marcel$ vendor/bin/phpunit
-#### PHPUnit 7.5.13 by Sebastian Bergmann and contributors.
+Marcels-MacBook-Pro:ZSSN marcel$ vendor/bin/phpunit
+PHPUnit 7.5.13 by Sebastian Bergmann and contributors.
 
 | GET                                        |
 |--------------------------------------------|
-| http://localhost/api/survivors (SUCCESS)   |
-| http://localhost/api/survivors/3 (SUCCESS) |
+| http://localhost/api/survivors (success)   |
+| http://localhost/api/survivors/3 (success) |
 
 | POST                                            |
 |-------------------------------------------------|
-| http://localhost/api/survivors (SUCCESS)        |
-| http://localhost/api/survivors/items (SUCCESS)  |
-| http://localhost/api/report/infection (SUCCESS) |
+| http://localhost/api/survivors (success)        |
+| http://localhost/api/survivors/items (success)  |
+| http://localhost/api/report/infection (success) |
 
 | PATCH                                               |
 |-----------------------------------------------------|
-| http://localhost/api/survivors/4/location (SUCCESS) |
+| http://localhost/api/survivors/4/location (success) |
 
 | DELETE                                     |
 |--------------------------------------------|
-| http://localhost/api/survivors/6 (SUCCESS) |
+| http://localhost/api/survivors/6 (success) |
 
 `OK (4 tests, 7 assertions)`  `4 / 4 (100%)`  `Time: 311 ms, Memory: 16.00 MB`  
