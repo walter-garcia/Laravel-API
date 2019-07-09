@@ -1,4 +1,4 @@
-# `Z`ombie `S`urvival `S`ocial `N`etwork - API
+# Zombie Survival Social Network - API
 
 
 ###### First of all, you will need to install `php` `composer` and `laravel`.
