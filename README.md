@@ -42,11 +42,13 @@ If you have PHP installed locally and you would like to use PHP's built-in devel
 
 ### Seedind the database tables
 
+Go to the **.ENV** file and change **DB_CONNECTION**, **DB_HOST**, **DB_PORT**, **DB_DATABASE**, **DB_USERNAME** and **DB_PASSWORD** according to your needs.
+
 ###### Using the terminal, go to the project directory and run the following commands:
 
 ~~~
-php artisan migrate
-php artisan db:seed
+php artisan migrate -> This will create the tables.
+php artisan db:seed -> This will seed the table `items` with the items.
 ~~~
 ---------------------------------------
 
