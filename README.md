@@ -8,7 +8,7 @@ You can skip all the `Local Development` configuration steps. Just <a href="http
     
 For both cases, you will need a `HTTP CLIENT`
 
-I recommend <a href="https://www.getpostman.com/downloads/">POSTMAN</a> or <a href="https://insomnia.rest/download/">INSOMNIA</a> Both are quite complete with many configuration options.
+I recommend <a href="https://www.getpostman.com/downloads/">POSTMAN</a> or <a href="https://insomnia.rest/download/">INSOMNIA</a>. Both are quite complete with many configuration options.
 
     
 ### Setting up the local environment
