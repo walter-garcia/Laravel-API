@@ -27,9 +27,9 @@ composer global require laravel/installer
 
 Make sure to place composer's system-wide vendor bin directory in your `$PATH` so the laravel executable can be located by your system. This directory exists in different locations based on your operating system; however, some common locations include:
 
-MacOS: `$HOME/.composer/vendor/bin`
-GNU / Linux Distributions: `$HOME/.config/composer/vendor/bin`
-Windows: `%USERPROFILE%\AppData\Roaming\Composer\vendor\bin`
+**MacOS:** `$HOME/.composer/vendor/bin`
+**GNU / Linux Distributions:** `$HOME/.config/composer/vendor/bin`
+**Windows:** `%USERPROFILE%\AppData\Roaming\Composer\vendor\bin`
 
 <a href="https://laracasts.com/series/laravel-from-scratch-2018/episodes/2">Click Here</a> to watch step-by-step installation guide
 
@@ -44,7 +44,7 @@ If you have PHP installed locally and you would like to use PHP's built-in devel
 php artisan serve
 ~~~
 
-### Seedind the database tables
+### Seeding the database tables
 
 Go to the **.ENV** file and change **DB_CONNECTION**, **DB_HOST**, **DB_PORT**, **DB_DATABASE**, **DB_USERNAME** and **DB_PASSWORD** according to your needs.
 
