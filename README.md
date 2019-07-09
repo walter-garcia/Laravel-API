@@ -38,11 +38,11 @@ Windows: `%USERPROFILE%\AppData\Roaming\Composer\vendor\bin`
 
 If you have PHP installed locally and you would like to use PHP's built-in development server to serve your application, you may use the serve Artisan command. This command will start a development server at http://localhost:8000
 
-###### Go to the project file and run `php artisan serve` on terminal.
+###### Using the terminal, go to the project directory and run `php artisan serve`.
 
 ### Seedind the database tables
 
-###### Go to the project file and run the following commands:
+###### Using the terminal, go to the project directory and run the following commands:
 
 ~~~
 php artisan migrate
