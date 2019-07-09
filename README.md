@@ -1,7 +1,7 @@
 # `Z`ombie `S`urvival `S`ocial `N`etwork - API
 
 
-## First of all, you will need to install `php` `composer` and `laravel`.
+###### First of all, you will need to install `php` `composer` and `laravel`.
 
 ###### Hint
 You can skip all the `Local Development` configuration steps. Just <a href="https://marcels-zssn.herokuapp.com" target="_blank">Click here<a> and test with Heroku.
