@@ -65,9 +65,9 @@ php artisan db:seed -> This will seed the ITEMS table with the items.
 
 ## Request
 
-###### With heroku
+**With heroku**
 `GET https://marcels-zssn.herokuapp.com/api/survivors`
-###### Local
+**Local**
 `GET http://localhost/zssn/public/api/survivors`
 
 
@@ -127,9 +127,9 @@ php artisan db:seed -> This will seed the ITEMS table with the items.
 
 ## Request
 
-###### With heroku
+**With heroku**
 `GET https://marcels-zssn.herokuapp.com/api/survivors/1`
-###### Local
+**Local**
 `GET http://localhost/zssn/public/api/survivors/1`
 
 ## Response
@@ -153,9 +153,9 @@ php artisan db:seed -> This will seed the ITEMS table with the items.
 
 ## Request
 
-###### With heroku
+**With heroku**
 `GET https://marcels-zssn.herokuapp.com/api/survivors/1/inventory`
-###### Local
+**Local**
 `GET http://localhost/zssn/public/api/survivors/1/inventory`
 
 ## Response
@@ -191,9 +191,9 @@ php artisan db:seed -> This will seed the ITEMS table with the items.
 
 ## Request
 
-###### With heroku
+**With heroku**
 `GET https://marcels-zssn.herokuapp.com/api/survivors/1/infection`
-###### Local
+**Local**
 `GET http://localhost/zssn/public/api/survivors/1/infection`
 
 ## Response
@@ -212,9 +212,9 @@ php artisan db:seed -> This will seed the ITEMS table with the items.
 
 ## Request
 
-###### With heroku
+**With heroku**
 `POST https://marcels-zssn.herokuapp.com/api/survivors`
-###### Local
+**Local**
 `POST http://localhost/zssn/public/api/survivors`
 
 #### Supply with the following properties
@@ -242,9 +242,9 @@ php artisan db:seed -> This will seed the ITEMS table with the items.
 
 ## Request
 
-###### With heroku
+**With heroku**
 `POST https://marcels-zssn.herokuapp.com/api/survivors/items`
-###### Local
+**Local**
 `POST http://localhost/zssn/public/api/survivors/items`
 
 #### Supply with the following properties
@@ -277,9 +277,9 @@ php artisan db:seed -> This will seed the ITEMS table with the items.
 
 ## Request
 
-###### With heroku
+**With heroku**
 `POST https://marcels-zssn.herokuapp.com/api/report/infection`
-###### Local
+**Local**
 `POST http://localhost/zssn/public/api/report/infection`
 
 #### Supply with the following properties
@@ -304,9 +304,9 @@ php artisan db:seed -> This will seed the ITEMS table with the items.
 
 ## Request
 
-###### With heroku
+**With heroku**
 `PATCH https://marcels-zssn.herokuapp.com/api/survivors/1/location`
-###### Local
+**Local**
 `PATCH http://localhost/zssn/public/api/survivors/1/location`
 
 #### Provide the new location
@@ -333,9 +333,9 @@ php artisan db:seed -> This will seed the ITEMS table with the items.
 
 ## Request
 
-###### With heroku
+**With heroku**
 `DELETE https://marcels-zssn.herokuapp.com/api/survivors/1`
-###### Local
+**Local**
 `DELETE http://localhost/zssn/public/api/survivors/1`
 
 ## Response
@@ -352,19 +352,19 @@ php artisan db:seed -> This will seed the ITEMS table with the items.
 
 ## Database tables access test
 
-| SURVIVORS TABLE                                     |
+| **SURVIVORS TABLE**                                 |
 |-----------------------------------------------------|
 | Successful access in `survivors` table (success)    |
 
-| ITEMS TABLE                                     |
+| **ITEMS TABLE**                                 |
 |-------------------------------------------------|
 | Successful access in `items` table (success)    |
 
-| INFECTIONS TABLE                                     |
+| **INFECTIONS TABLE**                                 |
 |------------------------------------------------------|
 | Successful access in `infections` table (success)    |
 
-| INVENTORIES TABLE                                     |
+| **INVENTORIES TABLE**                                 |
 |-------------------------------------------------------|
 | Successful access in `inventories` table (success)    |
 
