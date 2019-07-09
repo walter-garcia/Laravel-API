@@ -22,30 +22,45 @@ class DatabaseTest extends TestCase
 
         $response = $this->assertDatabaseHas('survivors', ['gender' => 'male']);
         if($response == true) {
-            echo  'Successful access in survivors database (success)';
-            $this->assertTrue(true);
+            echo  'Successful access in survivors table (success)';
+        } else {
+            echo  'Failed to access survivors table (failed)';
         }
         echo  PHP_EOL;
     }
 
-    public function testitemsDatabase($value='')
+    public function testItemsDatabase()
     {
         echo  PHP_EOL;
         $response = $this->assertDatabaseHas('items', ['item' => 'water']);
         if($response == true) {
-            echo  'Successful access in items database (success)';
-            $this->assertTrue(true);
+            echo  'Successful access in items table (success)';
+        } else {
+            echo  'Failed to access items table (failed)';
         }
         echo  PHP_EOL;
     }
 
-    public function testInfectionsDatabase($value='')
+    public function testInfectionsDatabase()
     {
         echo  PHP_EOL;
-        $response = $this->assertDatabaseHas('infections', ['infected' => 'true']);
+        $response = $this->assertDatabaseHas('infections', ['infected' => 1]);
         if($response == true) {
-            echo  'Successful access in infections database (success)';
-            $this->assertTrue(true);
+            echo  'Successful access in infections table (success)';
+        } else {
+            echo  'Failed to access infections table (failed)';
+        }
+        echo  PHP_EOL;
+    }
+
+    public function testInventoryDatabase()
+    {
+        echo  PHP_EOL;
+        $response = $this->assertDatabaseHas('inventories', ['survivor_id' => 1]);
+        if($response == true) {
+            echo  'Successful access in inventories table (success)';
+        } else {
+            echo  'Failed to access inventories table (failed)';
         }
         echo  PHP_EOL;
         echo  PHP_EOL;

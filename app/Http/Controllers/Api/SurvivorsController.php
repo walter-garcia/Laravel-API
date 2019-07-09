@@ -24,12 +24,9 @@ class SurvivorsController extends Controller
 
     public function index()
     {
-        $data = $this->survivor->paginate(5);
+        $data = $this->survivor->paginate(10);
 
-    	return response()->json([
-            $data,
-            'code' => '200 - OK'
-        ]);
+    	return response()->json($data);
     }
 
     public function show(Survivor $survivor) 

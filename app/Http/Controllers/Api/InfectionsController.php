@@ -12,13 +12,14 @@ class InfectionsController extends Controller
 {
     private $infection;
 
-    public function __construct(Infection $infection, Survivor $survivor)
+    public function __construct(Infection $infection)
     {
         $this->infection = $infection;
     }
 
-    public function show(Survivor $survivor, Infection $infection)
+    public function show(Survivor $survivor)
     {
+
         $infection_report = $this->infection->all();
 
         $infected_survivor = $infection_report
@@ -27,21 +28,18 @@ class InfectionsController extends Controller
             ->count();
 
         $infected = ($infected_survivor >= 3);
-
-        $total_survivor = $survivor
-            ->all()
-            ->where('id')
-            ->count();
-
+        
         return response()->json([
-            'Survivor' => $survivor->name,
-            'infected' => $infected,
-            'total_survivor' => $total_survivor
+            'id' => $survivor->id,
+            'survivor_name' => $survivor->name,
+            'infected' => $infected
         ]);
+
     }
 
     public function store(InfectionRequest $request)
     {
+
 		$infectionData = $request->all();
     	
         $this->infection->create($infectionData);
@@ -50,6 +48,6 @@ class InfectionsController extends Controller
             'msg' => 'Infection Reported successfully',
             'code' => '200 - OK'
         ]);
-    	
+
     }
 }
