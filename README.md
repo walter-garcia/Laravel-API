@@ -17,7 +17,7 @@ I recommend <a href="https://www.getpostman.com/downloads/">POSTMAN</a> or <a hr
 
 Laravel utilizes Composer to manage its dependencies. So, before using Laravel, make sure you have Composer `Globally` installed on your machine.
 
-Download <a href="https://getcomposer.org/doc/00-intro.md#installation-linux-unix-macos" target="_blank">Composer for Linux/Mac<a> or <a href="https://getcomposer.org/doc/00-intro.md#installation-windows" target="_blank">Composer for Windows<a>. Or both. It's up to you  :)
+Download <a href="https://getcomposer.org/doc/00-intro.md#installation-linux-unix-macos" target="_blank">Composer for Linux/Mac<a> or <a href="https://getcomposer.org/doc/00-intro.md#installation-windows" target="_blank">Composer for Windows<a>. Or both, It's up to you  :)
 
 Now, download the Laravel installer using Composer:
 
