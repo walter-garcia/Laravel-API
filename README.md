@@ -1,7 +1,55 @@
 # `Z`ombie `S`urvival `S`ocial `N`etwork - API
 
-<a href="https://marcels-zssn.herokuapp.com" target="_blank">Check it out<a>
 
+## First of all, you will need to install `php` `composer` and `laravel`.
+
+###### Hint
+You can skip all the `Local Development` configuration steps. Just <a href="https://marcels-zssn.herokuapp.com" target="_blank">Click here<a> and test with Heroku.
+    
+For both cases, you will need a `HTTP CLIENT`
+
+I recommend `<a href="https://www.getpostman.com/downloads/">POSTMAN</a>` or `<a href="https://insomnia.rest/download/">INSOMNIA</a> Both are quite complete with many configuration options.
+
+    
+### Setting up the local environment
+
+<a href="https://www.php.net/downloads.php">Download php</a>
+
+Laravel utilizes Composer to manage its dependencies. So, before using Laravel, make sure you have Composer `Globally` installed on your machine.
+
+<a href="https://getcomposer.org/doc/00-intro.md#installation-linux-unix-macos" target="_blank">Composer for Linux/Mac<a>
+<a href="https://getcomposer.org/doc/00-intro.md#installation-windows" target="_blank">Composer for Windows<a>
+
+Now, download the Laravel installer using Composer:
+
+~~~
+composer global require laravel/installer
+~~~
+
+Make sure to place composer's system-wide vendor bin directory in your `$PATH` so the laravel executable can be located by your system. This directory exists in different locations based on your operating system; however, some common locations include:
+
+macOS: `$HOME/.composer/vendor/bin`
+GNU / Linux Distributions: `$HOME/.config/composer/vendor/bin`
+Windows: `%USERPROFILE%\AppData\Roaming\Composer\vendor\bin`
+
+<a href="https://laracasts.com/series/laravel-from-scratch-2018/episodes/2">Click Here</a> to watch step-by-step installation guide
+
+
+### Local Development Server
+
+If you have PHP installed locally and you would like to use PHP's built-in development server to serve your application, you may use the serve Artisan command. This command will start a development server at http://localhost:8000
+
+###### Go to the project file and run `php artisan serve` on terminal.
+
+### Seedind the database tables
+
+###### Go to the project file and run the following commands:
+
+~~~
+php artisan migrate
+php artisan db:seed
+~~~
+---------------------------------------
 
 ## Show all survivors
 
@@ -9,7 +57,11 @@
 
 ## Request
 
+###### With heroku
 `GET https://marcels-zssn.herokuapp.com/api/survivors`
+###### Local
+`GET http://localhost/zssn/public/api/survivors`
+
 
 ## Response
 
@@ -67,7 +119,10 @@
 
 ## Request
 
+###### With heroku
 `GET https://marcels-zssn.herokuapp.com/api/survivors/1`
+###### Local
+`GET http://localhost/zssn/public/api/survivors/1`
 
 ## Response
 
@@ -90,7 +145,10 @@
 
 ## Request
 
+###### With heroku
 `GET https://marcels-zssn.herokuapp.com/api/survivors/1/inventory`
+###### Local
+`GET http://localhost/zssn/public/api/survivors/1/inventory`
 
 ## Response
 
@@ -125,7 +183,10 @@
 
 ## Request
 
+###### With heroku
 `GET https://marcels-zssn.herokuapp.com/api/survivors/1/infection`
+###### Local
+`GET http://localhost/zssn/public/api/survivors/1/infection`
 
 ## Response
 
@@ -143,7 +204,10 @@
 
 ## Request
 
+###### With heroku
 `POST https://marcels-zssn.herokuapp.com/api/survivors`
+###### Local
+`POST http://localhost/zssn/public/api/survivors`
 
 #### Supply with the following properties
 
@@ -170,7 +234,10 @@
 
 ## Request
 
+###### With heroku
 `POST https://marcels-zssn.herokuapp.com/api/survivors/items`
+###### Local
+`POST http://localhost/zssn/public/api/survivors/items`
 
 #### Supply with the following properties
 
@@ -202,7 +269,10 @@
 
 ## Request
 
+###### With heroku
 `POST https://marcels-zssn.herokuapp.com/api/report/infection`
+###### Local
+`POST http://localhost/zssn/public/api/report/infection`
 
 #### Supply with the following properties
 
@@ -222,11 +292,14 @@
 
 ## Update survivor location
 
-`PUT api/survivors/{id}/location`
+`PATCH api/survivors/{id}/location`
 
 ## Request
 
-`PUT https://marcels-zssn.herokuapp.com/api/survivors/id/location`
+###### With heroku
+`PATCH https://marcels-zssn.herokuapp.com/api/survivors/1/location`
+###### Local
+`PATCH http://localhost/zssn/public/api/survivors/1/location`
 
 #### Provide the new location
 
@@ -252,7 +325,10 @@
 
 ## Request
 
-`DELETE https://marcels-zssn.herokuapp.com/api/survivors/id`
+###### With heroku
+`DELETE https://marcels-zssn.herokuapp.com/api/survivors/1`
+###### Local
+`DELETE http://localhost/zssn/public/api/survivors/1`
 
 ## Response
 
