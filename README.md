@@ -48,8 +48,11 @@ Go to the **.ENV** file and change **DB_CONNECTION**, **DB_HOST**, **DB_PORT**, 
 
 ~~~
 php artisan migrate -> This will create the tables.
-php artisan db:seed -> This will seed the table `items` with the items.
+php artisan db:seed -> This will seed the ITEMS table with the items.
 ~~~
+
+###### The survivors, infections and inventories table will be empty. That way you can create and manage your own data.
+
 ---------------------------------------
 
 ## Show all survivors
