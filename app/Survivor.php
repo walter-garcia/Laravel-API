@@ -13,9 +13,9 @@ class Survivor extends Model
     	'latitude',
     	'longitude'
     ];
-
+    
     public function items()
     {
-    	return $this->hasMany('App\Item', 'survivor_id');
+        return $this->hasMany('App\Item');
     }
 }

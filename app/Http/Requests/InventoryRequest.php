@@ -7,9 +7,9 @@ use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Http\Response;
 use Illuminate\Http\Exceptions\HttpResponseException;
 
-class ItemRequest extends FormRequest
+class InventoryRequest extends FormRequest
 {
-    public function wantsJson()
+   public function wantsJson()
     {
         return true;
     }
@@ -23,7 +23,6 @@ class ItemRequest extends FormRequest
         }
         parent::failedValidation($validator);
     }
-
     /**
      * Determine if the user is authorized to make this request.
      *
@@ -43,8 +42,8 @@ class ItemRequest extends FormRequest
     {
         return [
             'survivor_id' => 'required|numeric',
-            'item' => 'required|min:4|max:15',
-            'points' => 'required|numeric'
+            'item_id' => 'required|numeric',
+            'amount' => 'required|numeric'
         ];
     }
 }

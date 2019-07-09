@@ -216,7 +216,7 @@
 ~~~
 
 
-# Test
+# Tests
 
 ## EndPointsTest
 
@@ -359,4 +359,84 @@ PHPUnit 7.5.13 by Sebastian Bergmann and contributors.
 |--------------------------------------------|
 | http://localhost/api/survivors/6 (success) |
 
-`OK (4 tests, 7 assertions)`  `4 / 4 (100%)`  `Time: 311 ms, Memory: 16.00 MB`  
+`OK (4 tests, 7 assertions)`  `4 / 4 (100%)`  `Time: 311 ms, Memory: 16.00 MB`
+
+## Databases Test
+
+~~~
+<?php
+
+namespace Tests\Unit;
+
+use Tests\TestCase;
+use Illuminate\Foundation\Testing\WithFaker;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+
+class DatabaseTest extends TestCase
+{
+    /**
+     * Databases test.
+     *
+     * @return void
+     */
+    public function testSurvivorsDatabase()
+    {
+      echo 'BEGIN DATABASES TESTS';
+        echo  PHP_EOL;
+        echo  PHP_EOL;
+
+        $response = $this->assertDatabaseHas('survivors', ['gender' => 'male']);
+        if($response == true) {
+            echo  'Successful access in survivors database (success)';
+            $this->assertTrue(true);
+        }
+        echo  PHP_EOL;
+    }
+
+    public function testitemsDatabase($value='')
+    {
+        echo  PHP_EOL;
+        $response = $this->assertDatabaseHas('items', ['item' => 'water']);
+        if($response == true) {
+            echo  'Successful access in items database (success)';
+            $this->assertTrue(true);
+        }
+        echo  PHP_EOL;
+    }
+
+    public function testInfectionsDatabase($value='')
+    {
+        echo  PHP_EOL;
+        $response = $this->assertDatabaseHas('infections', ['infected' => 'true']);
+        if($response == true) {
+            echo  'Successful access in infections database (success)';
+            $this->assertTrue(true);
+        }
+        echo  PHP_EOL;
+        echo  PHP_EOL;
+        echo 'END DATABASES TESTS';
+        echo  PHP_EOL;
+    }
+}
+~~~
+
+## Response
+
+<p>
+Marcels-MacBook-Pro:ZSSN marcel$ vendor/bin/phpunit <br />
+PHPUnit 7.5.13 by Sebastian Bergmann and contributors.
+</p>
+
+| SURVIVORS DATABASE                                  |
+|-----------------------------------------------------|
+| Successful access in `survivors` database (success) |
+
+| ITEMS DATABASE                                  |
+|-------------------------------------------------|
+| Successful access in `items` database (success) |
+
+| INFECTIONS DATABASE                                  |
+|------------------------------------------------------|
+| Successful access in `infections` database (success) |
+
+`OK (3 tests, 6 assertions)`  `3 / 3 (100%)`  `Time: 241 ms, Memory: 14.00 MB`

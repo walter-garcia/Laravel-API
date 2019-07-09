@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Inventory;
 use App\Infection;
 use App\Survivor;
 use App\Item;
@@ -13,10 +14,11 @@ class SurvivorsController extends Controller
 {
     private $survivor;
 
-    public function __construct(Survivor $survivor, Item $item, Infection $infection)
+    public function __construct(Survivor $survivor, Inventory $inventory, Infection $infection, Item $item)
     {
     	$this->survivor = $survivor;
         $this->item = $item;
+        $this->inventory = $inventory;
         $this->infection = $infection;
     }
 
@@ -30,43 +32,9 @@ class SurvivorsController extends Controller
         ]);
     }
 
-    public function show(Survivor $survivor)
+    public function show(Survivor $survivor) 
     {
-        $item = $this->item;
-        $survivor_items = $this->item->all();
-
-        $water = $item->where('item', 'water')->where('survivor_id', $survivor->id)->where('survivor_id', $survivor->id)->count();
-        $water_point = $item->where('item', 'water')->where('survivor_id', $survivor->id)->sum('points');
-
-        $food = $item->where('item', 'food')->where('survivor_id', $survivor->id)->count();
-        $food_point = $item->where('item', 'food')->where('survivor_id', $survivor->id)->sum('points');
-
-        $medication = $item->where('item', 'medication')->where('survivor_id', $survivor->id)->count();
-        $medication_point = $item->where('item', 'medication')->where('survivor_id', $survivor->id)->sum('points');
-
-        $ammunition = $item->where('item', 'ammunition')->where('survivor_id', $survivor->id)->count();
-        $ammunition_point = $item->where('item', 'ammunition')->where('survivor_id', $survivor->id)->sum('points');
-
-
-        $infection_report = $this->infection->all();
-        $infected_survivor = $infection_report->where('infected', true)->where('survivor_id', $survivor->id)->count();
-        $infected = ($infected_survivor >= 3);
-
-        // $infected_percentage = infected_survivor / 
-
-    	return response()->json([
-            'survivor' => $survivor,
-            'water_amount' => $water,
-            'water_points' => $water_point,
-            'food_amount' => $food,
-            'food_points' => $food_point,
-            'medication_amount' => $medication,
-            'medication_points' => $medication_point,
-            'ammunition_amount' => $ammunition,
-            'ammunition_points' => $ammunition_point,
-            'is_infected' => $infected,
-            // 'percentage_of_infected_survivors' => $infected_percentage
-        ]);
+        return response()->json($survivor);
     }
      
     public function store(SurvivorRequest $request)

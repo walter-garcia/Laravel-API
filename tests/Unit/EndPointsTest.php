@@ -15,6 +15,10 @@ class EndPointsTest extends TestCase
      */
     public function testGetEndPoints()
     {
+        echo  PHP_EOL;
+        echo  PHP_EOL;
+        echo 'BEGIN ROUTES TESTS';
+        echo  PHP_EOL; 
         $appURL = env('APP_URL');
 
         $urls = [
@@ -27,7 +31,7 @@ class EndPointsTest extends TestCase
         foreach ($urls as $url) {
             $response = $this->get($url);
             if((int)$response->status() !== 200){
-                echo  $appURL . $url . ' (failed) did not return a 200.';
+                echo 'Get to ' . $appURL . $url . ' (failed) did not return a 200.';
                 $this->assertTrue(true);
             } else {
                 echo $appURL . $url . ' (success)';
@@ -105,6 +109,8 @@ class EndPointsTest extends TestCase
                 $this->assertTrue(true);
             }
             echo  PHP_EOL;
+            echo  PHP_EOL;
+            echo 'END ROUTES TESTS';
         }
     }
 }

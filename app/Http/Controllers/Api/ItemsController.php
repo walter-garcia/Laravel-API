@@ -15,6 +15,7 @@ class ItemsController extends Controller
     {
         $this->item = $item;
     }
+
     public function store(ItemRequest $request)
     {
 		$itemData = $request->all();

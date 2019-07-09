@@ -4,14 +4,15 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Item extends Model
+class Inventory extends Model
 {
     protected $fillable = [
-    	'item',
-    	'points'
+    	'survivor_id',
+    	'item_id',
+    	'amount'
     ];
 
-    public function survivor()
+    public function inventory()
     {
     	return $this->belongsTo('App\Survivor', 'id');
     }
