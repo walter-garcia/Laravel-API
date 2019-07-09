@@ -1,9 +1,7 @@
 # Zombie Survival Social Network - API
 
 
-###### First of all, you will need to install `php` `composer` and `laravel`.
-
-###### Hint
+#### Hint
 You can skip all the `Local Development` configuration steps. Just <a href="https://marcels-zssn.herokuapp.com" target="_blank">Click here<a> and test with Heroku.
     
 For both cases, you will need a `HTTP CLIENT`
@@ -12,6 +10,8 @@ I recommend <a href="https://www.getpostman.com/downloads/">POSTMAN</a> or <a hr
 
     
 ### Setting up the local environment
+
+###### You will need `php` `composer` and `laravel`.
 
 <a href="https://www.php.net/downloads.php">Download php</a>
 
