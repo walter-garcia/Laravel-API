@@ -2,9 +2,9 @@
 
 
 #### Hint
-You can skip all the `Local Development` configuration steps. Just <a href="https://marcels-zssn.herokuapp.com" target="_blank">Click here<a> and test with Heroku.
+You can skip all the **Local Development** configuration steps. Just <a href="https://marcels-zssn.herokuapp.com" target="_blank">Click here<a> and test with Heroku.
     
-For both cases, you will need a `HTTP CLIENT`
+For both cases, you will need a **HTTP CLIENT**
 
 I recommend <a href="https://www.getpostman.com/downloads/">POSTMAN</a> or <a href="https://insomnia.rest/download/">INSOMNIA</a>. Both are quite complete with many configuration options.
 
@@ -15,7 +15,7 @@ I recommend <a href="https://www.getpostman.com/downloads/">POSTMAN</a> or <a hr
 
 <a href="https://www.php.net/downloads.php">Download php</a>
 
-Laravel utilizes Composer to manage its dependencies. So, before using Laravel, make sure you have Composer `Globally` installed on your machine.
+Laravel utilizes Composer to manage its dependencies. So, before using Laravel, make sure you have Composer **Globally** installed on your machine.
 
 Download <a href="https://getcomposer.org/doc/00-intro.md#installation-linux-unix-macos" target="_blank">Composer for Linux/Mac<a> or <a href="https://getcomposer.org/doc/00-intro.md#installation-windows" target="_blank">Composer for Windows<a>. Or both, It's up to you  :)
 
@@ -27,7 +27,7 @@ composer global require laravel/installer
 
 Make sure to place composer's system-wide vendor bin directory in your `$PATH` so the laravel executable can be located by your system. This directory exists in different locations based on your operating system; however, some common locations include:
 
-macOS: `$HOME/.composer/vendor/bin`
+MacOS: `$HOME/.composer/vendor/bin`
 GNU / Linux Distributions: `$HOME/.config/composer/vendor/bin`
 Windows: `%USERPROFILE%\AppData\Roaming\Composer\vendor\bin`
 
@@ -38,7 +38,11 @@ Windows: `%USERPROFILE%\AppData\Roaming\Composer\vendor\bin`
 
 If you have PHP installed locally and you would like to use PHP's built-in development server to serve your application, you may use the serve Artisan command. This command will start a development server at http://localhost:8000
 
-###### Using the terminal, go to the project directory and run `php artisan serve`.
+###### Using the terminal, go to the project directory and run
+
+~~~
+php artisan serve
+~~~
 
 ### Seedind the database tables
 
