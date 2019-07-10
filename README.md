@@ -350,6 +350,12 @@ php artisan db:seed -> This will seed the ITEMS table with the items.
 
 # Tests
 
+###### Using the terminal, go to the project directory and run
+
+~~~
+vendor/bin/phpunit
+~~~
+
 ## Database tables access test
 
 | **SURVIVORS TABLE**                                 |
