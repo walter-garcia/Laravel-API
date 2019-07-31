@@ -1,4 +1,4 @@
-# Zombie Survival Social Network - API
+# Laravel - API
 
 
 #### Hint
@@ -346,32 +346,3 @@ php artisan db:seed -> This will seed the ITEMS table with the items.
   "code": "200 - OK"
 }
 ~~~
-
-
-# Tests
-
-###### Using the terminal, go to the project directory and run
-
-~~~
-vendor/bin/phpunit
-~~~
-
-## Database tables access test
-
-| **SURVIVORS TABLE**                                 |
-|-----------------------------------------------------|
-| Successful access in `survivors` table (success)    |
-
-| **ITEMS TABLE**                                 |
-|-------------------------------------------------|
-| Successful access in `items` table (success)    |
-
-| **INFECTIONS TABLE**                                 |
-|------------------------------------------------------|
-| Successful access in `infections` table (success)    |
-
-| **INVENTORIES TABLE**                                 |
-|-------------------------------------------------------|
-| Successful access in `inventories` table (success)    |
-
-`OK (4 tests, 4 assertions)`  `4 / 4 (100%)`  `Time: 237 ms, Memory: 14.00 MB`
